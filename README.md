@@ -1,5 +1,5 @@
 # py-fractals
-Some python scripts to build awesome fractals
+Some python scripts to build awesome fractals.
 
 !! All three files will require the Pillow library for Python !!
 
