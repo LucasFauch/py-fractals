@@ -6,7 +6,7 @@ ymin = -2
 xmax = 2
 ymax = 2
 
-def julia(a,b):
+def julia(a,b,s):
     img = new('RGB',(1000,1000), (255, 255, 255))
     (l,h) = img.size
     for x in range(l):
@@ -21,4 +21,8 @@ def julia(a,b):
                 n+=1
             Image.putpixel(img,(x,y), (int(n*255/300),int(n*255/300),int(n*255/300)))
     img.show()
-    #img.save("julia.png", "PNG")
+    signe="-"
+    if b>=0:
+        signe="+"
+    if s==1:
+        img.save("julia({}{}{}i).png".format(a,signe,b), "PNG")
