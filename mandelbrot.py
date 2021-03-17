@@ -19,10 +19,12 @@ def mandelbrot():
             while n<=300 and abs(z)<=16:
                 z=z*z+c
                 n+=1
-            '''r = n % 4 * 64
+            '''
+            r = n % 4 * 64
             g = n % 8 * 32
             b = n % 16 * 16
-            #Image.putpixel(img,(x, y), (b * 65536 + g * 256 + r))'''
+            Image.putpixel(img,(x, y), (b * 65536 + g * 256 + r))
+            '''
             Image.putpixel(img,(x,y), (int(n*255/300),int(n*255/300),int(n*255/300)))
     img.show()
     #img.save("mandel.png", "PNG")
